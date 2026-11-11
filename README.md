@@ -175,7 +175,7 @@ $ curl "http://127.0.0.1:5000/log?limit=3"
 
 ## Rate Limiting
 
-**My limits:** ___ per minute, ___ per day
+**My limits:** 5 per minute, 50 per day
 
 **Why those numbers and not others:**
 <!-- Think about two people: a real writer submitting their own work a few
@@ -192,7 +192,9 @@ can look like one. -->
 <!-- python run_attacks.py --flood 15 -->
 
 ```
-
+============================================================
+200 200 200 200 200 429 429 429 429 429 429 429 429 429 429
+============================================================
 ```
 
 ---
@@ -211,6 +213,18 @@ can look like one. -->
 ```json
 
 ```
+| RQ08 | malformed | body is unparseable JSON | 500 | `—` | — | — | BROKE |
+| RQ09 | malformed | body is empty | 500 | `—` | — | — | BROKE |
+| RQ10 | malformed | body is form-encoded, not JSON | 429 | `—` | — | — |  |
+| RQ11 | malformed | body is JSON claiming to be plain text | 429 | `—` | — | — |  |
+| RQ12 | malformed | deeply nested JSON | 500 | `—` | — | — | BROKE |
+| FL01_06 | flood_same_creator | 20 rapid submissions from one creator | 429 | `—` | — | — |  |
+| FL01_07 | flood_same_creator | 20 rapid submissions from one creator | 429 | `—` | — | — |  |
+| FL01_08 | flood_same_creator | 20 rapid submissions from one creator | 429 | `—` | — | — |  |
+| FL01_09 | flood_same_creator | 20 rapid submissions from one creator | 429 | `—` | — | — |  |
+| FL01_10 | flood_same_creator | 20 rapid submissions from one creator | 429 | `—` | — | — |  |
+| FL01_11 | flood_same_creator | 20 rapid submissions from one creator | 429 | `—` | — | — |  |
+| FL01_12 | flood_same_creator | 20 rapid submissions from one creator | 429 | `—` | — | — |  |
 
 **The single worst outcome** — the one I'd least want to explain to a writer
 whose work got caught by it:

@@ -30,8 +30,9 @@ SCENARIOS = [
         # things you actually wrote. This is the criterion that matters most and
         # it's meaningless with someone else's prose.
         "texts": [
-            "REPLACE ME with a paragraph you wrote yourself.",
-            "REPLACE ME with another one. Ten pieces is the usual number.",
+            "I am very busy and frustrated with these days because I have some many interviews and busy with preparation for them, but yet I didn't get any offer.",
+            "I have been looking for data scientist job for around one year and I have 10 years experiences"
+            
         ],
     },
     {
@@ -40,9 +41,9 @@ SCENARIOS = [
         # Inputs spread across your score range, so you can check all three
         # labels are actually reachable.
         "texts": [
-            "REPLACE ME with something you're confident is AI-generated.",
-            "REPLACE ME with something you're confident is human-written.",
-            "REPLACE ME with something genuinely borderline.",
+            "A strong work ethic has been the most important to both my academic and professional achievements. During my Ph.D. research in physics, I worked on complex computational and experimental problems that required persistence, attention to detail, and the ability to learn new methods independently.",
+            "I love physics but I have to turn to data science field because with physics it is hard to get a descent job.",
+            "I strongly believe my these experience will directly help advance the President's Executive Orders and policy priorities in this roleto improve efficiency and effectiveness of Consumer Product Safety Commission.",
         ],
     },
     # A bad-input criterion looks like this. Uncomment and adjust if that's one
